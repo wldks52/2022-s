@@ -24,7 +24,7 @@ while(True):
     k = cv2.waitKey(100) & 0xff # ESC로 종료
     if k == 27:
         break
-    elif count >= 5000: # count 만큼 캡쳐 후 종료
+    elif count >= 2: # count 만큼 캡쳐 후 종료
         break
 
 print("\n [INFO] Exiting Program and cleanup stuff")

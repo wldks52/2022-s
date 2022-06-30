@@ -4,7 +4,7 @@ from PIL import Image
 import os
 
 # Path : dataset 파일 경로
-path = 'C:/Users/OPENIN/Desktop/2022-s/dataset'
+path = 'dataset'
 # LBP 알고리즘, Local-Binary-Pattern, 주변의 값을 2진수로 표현 -> 값 계산
 recognizer = cv2.face.LBPHFaceRecognizer_create() # LBPH를 사용할 변수
 
@@ -28,6 +28,6 @@ print ("\n [INFO] Training faces. It will take a few seconds. Wait ...")
 faces,ids = getImagesAndLabels(path)
 recognizer.train(faces, np.array(ids))
 
-recognizer.write('C:/Users/OPENIN/Desktop/2022-s/trainer/trainer.yml')
+recognizer.write('trainer/trainer.yml')
 
 print("\n [INFO] {0} faces trained. Exiting Program".format(len(np.unique(ids))))
